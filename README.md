@@ -7,7 +7,7 @@ Two tools are implemented :
 - indexing.py : this tool preprocesses the document collection and build the inverted index
 - query.py : this tool processes the queries to give the most relevant documents in the collection
 
-##The index must be built before launching the query tool##
+**The index must be built before launching the query tool**
 
 # Installation
 Before launching the programs, please install the required dependencies:
