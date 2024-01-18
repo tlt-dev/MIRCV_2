@@ -1,0 +1,5 @@
+path
+nltk
+num2words
+alive_progress
+
