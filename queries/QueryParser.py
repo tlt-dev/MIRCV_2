@@ -5,7 +5,6 @@ from nltk import PorterStemmer
 from num2words import num2words
 
 from document_processing.Config import Config
-from inverted_index.DocumentTable import build_document_table
 
 
 def remove_malformed_characters(line):

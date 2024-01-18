@@ -13,17 +13,17 @@ def tfidf(index_fp, doc_id, posting_length, total_docs):
 
 
 def bm25(index_fp, document_table, doc_id, posting_length, total_docs, avgdl, k1=1.5, b=0.75):
-    # Calculate IDF
+    #  IDF
     posting_dict = get_posting(index_fp, posting_length)
     doc_freq = len(posting_dict)
     idf = math.log((total_docs - doc_freq + 0.5) / (doc_freq + 0.5) + 1)
 
-    # Calculate term frequency in the document
+    # Term frequency
     tf = posting_dict[doc_id] if doc_id in posting_dict else 0
 
-    # Calculate the document length
     doc_length = document_table[doc_id]['doc_length']
 
-    # Calculate BM25
+    # BM25
     score = idf * ((tf * (k1 + 1)) / (tf + k1 * (1 - b + b * (doc_length / avgdl))))
+
     return score

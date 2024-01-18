@@ -15,7 +15,6 @@ def conjunctive(query, index_fp, lexicon):
     if not postings_list:
         return []
 
-    # # Find intersection of posting lists
     common_documents = set.intersection(*map(set, postings_list))
 
     return list(common_documents)
@@ -24,7 +23,6 @@ def conjunctive(query, index_fp, lexicon):
 def disjunctive(preprocessed_query, index_fp, lexicon):
     all_documents = set()
 
-    # Add all documents where a term is present
     for term in preprocessed_query:
         if term in lexicon:
             index_fp.seek(lexicon[term]["offset"])

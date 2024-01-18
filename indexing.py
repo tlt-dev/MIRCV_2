@@ -84,8 +84,8 @@ def run():
     parser.add_argument("--stopwords", action="store_true", help="Process stop_word removal")
     parser.add_argument("--stemming", action="store_true", help="Process stemming with Porter Algorithm")
     parser.add_argument('--use_compression', action='store_true', help='If true, use binary format for performance')
-    parser.add_argument('--test', action='store_true', help='If true, test dataset is used (results in data/tests/')
-    parser.add_argument('--binary', action='store_true', help='If true, test dataset is used (results in data/tests/')
+    parser.add_argument('--test', action='store_true', help='If true, test dataset is used (results in data/tests/)')
+    parser.add_argument('--binary', action='store_true', help='If true, test will be proceed with compression (results in data/tests/)')
 
     args = parser.parse_args()
 

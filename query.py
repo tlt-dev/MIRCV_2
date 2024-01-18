@@ -12,8 +12,6 @@ import os
 
 
 def process_query(query, index_fp, lexicon, document_table, config):
-    """    Process the query, compute ranking scores and return relevant documents ordered by relevance.    """
-
     query_terms = preprocess_query(query)
 
     if config.query_type == 'AND':
